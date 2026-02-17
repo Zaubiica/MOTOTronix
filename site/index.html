@@ -53,6 +53,8 @@
 
     <main class="main">
       <div class="container">
+
+        <!-- HERO -->
         <section class="card">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <span class="home">
@@ -61,36 +63,156 @@
             </span>
           </nav>
 
-          <h1 class="page-title" style="margin-top:14px;">Заглавна страница</h1>
-          <p class="page-subtitle">
-            Навигация по схема: Новини, За нас, Технически теми и Марки.
-          </p>
-        </section>
+          <div class="hero" style="margin-top:14px;">
+            <div>
+              <h1 class="page-title">Технически портал за автомобили</h1>
+              <p class="page-subtitle">
+                Обяснения на ключови теми (термодинамика, аеродинамика, механика) + страници за марки.
+                Структурата е по схема, а дизайнът е по оранжево/черно/сиво/бяло.
+              </p>
 
-        <section class="card" id="topics">
-          <h2 style="margin:0 0 10px 0;">Технически теми</h2>
-          <div class="grid">
-            <article class="card">
-              <h3 style="margin:0 0 8px 0;">Термодинамика</h3>
-              <p style="margin:0;color:var(--muted);line-height:1.6;">
-                ДВГ, цикли, КПД, загуби.
+              <div class="hero-actions">
+                <a class="btn primary" href="topics/aerodynamics.html">Старт: Аеродинамика</a>
+                <a class="btn" href="topics/engine-thermo.html">ДВГ / Термодинамика</a>
+                <a class="btn" href="news.html">Виж новини</a>
+              </div>
+
+              <p style="margin:12px 0 0 0;color:var(--muted);line-height:1.6;">
+                * Тук по-късно може да добавиш кратки “feature” цифри: Cd примери, спирачен път при 100 км/ч и т.н.
               </p>
-            </article>
-            <article class="card">
-              <h3 style="margin:0 0 8px 0;">Аеродинамика</h3>
-              <p style="margin:0;color:var(--muted);line-height:1.6;">
-                Cd, downforce, налягане и граничен слой.
-              </p>
-            </article>
+            </div>
+
+            <div class="media hero-media" aria-label="Hero image">
+              <!-- Replace with real image -->
+              <img src="assets/img/hero.jpg" alt="Снимка на автомобил (hero)" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>HERO СНИМКА (assets/img/hero.jpg)</div>';">
+            </div>
           </div>
         </section>
 
-        <section class="card" id="brands">
-          <h2 style="margin:0 0 10px 0;">Марки</h2>
-          <p style="margin:0;color:var(--muted);line-height:1.6;">
-            Страници за отделни производители (пример: Mercedes, Honda).
-          </p>
+        <!-- 3 FEATURE CARDS -->
+        <section class="cards-3">
+          <article class="card">
+            <div class="media card-mini-media card-media-top">
+              <img src="assets/img/feature-thermo.jpg" alt="Термодинамика" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>СНИМКА: Thermo</div>';">
+            </div>
+            <h2 class="section-title">ДВГ / Термодинамика</h2>
+            <p class="section-note">Цикли (Ото/Дизел), КПД, загуби и реални примери.</p>
+            <div style="margin-top:12px;">
+              <a class="btn" href="topics/engine-thermo.html">Отвори темата</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media card-mini-media card-media-top">
+              <img src="assets/img/feature-aero.jpg" alt="Аеродинамика" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>СНИМКА: Aero</div>';">
+            </div>
+            <h2 class="section-title">Аеродинамика</h2>
+            <p class="section-note">Cd, downforce, налягане, граничен слой, дифузьори.</p>
+            <div style="margin-top:12px;">
+              <a class="btn" href="topics/aerodynamics.html">Отвори темата</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media card-mini-media card-media-top">
+              <img src="assets/img/feature-brakes.jpg" alt="Спирачен път" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>СНИМКА: Brakes</div>';">
+            </div>
+            <h2 class="section-title">Ускорение / Спирачен път</h2>
+            <p class="section-note">Реакционно време, сцепление, ABS и влиянието на настилката.</p>
+            <div style="margin-top:12px;">
+              <a class="btn" href="topics/acceleration-path.html">Отвори темата</a>
+            </div>
+          </article>
         </section>
+
+        <!-- TOPICS -->
+        <section class="card" id="topics">
+          <h2 style="margin:0 0 6px 0;">Технически теми</h2>
+          <p class="page-subtitle" style="margin:0 0 14px 0;">
+            Всяка тема има собствена страница. Тук имаш кратък преглед с място за снимка.
+          </p>
+
+          <div class="topic-grid">
+            <a class="card topic-item" href="topics/engine-thermo.html">
+              <div class="media">
+                <img src="assets/img/topic-thermo.jpg" alt="ДВГ / Термодинамика" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>ТЕМА: Thermo</div>';">
+              </div>
+              <h3 style="margin:0 0 6px 0;">ДВГ / Термодинамика</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.6;">Цикли, КПД, топлина и работа.</p>
+            </a>
+
+            <a class="card topic-item" href="topics/aerodynamics.html">
+              <div class="media">
+                <img src="assets/img/topic-aero.jpg" alt="Аеродинамика" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>ТЕМА: Aero</div>';">
+              </div>
+              <h3 style="margin:0 0 6px 0;">Аеродинамика</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.6;">Съпротивление, downforce, дифузьор.</p>
+            </a>
+
+            <a class="card topic-item" href="topics/mechanics.html">
+              <div class="media">
+                <img src="assets/img/topic-mechanics.jpg" alt="Механика" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>ТЕМА: Mechanics</div>';">
+              </div>
+              <h3 style="margin:0 0 6px 0;">Механика</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.6;">Сили, триене, енергия, импулс.</p>
+            </a>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="topics/hydraulics.html">Още: Хидравлика</a>
+            <a class="btn" href="topics/acceleration-path.html">Още: Ускорение/Спиране</a>
+          </div>
+        </section>
+
+        <!-- BRANDS -->
+        <section class="card" id="brands">
+          <h2 style="margin:0 0 6px 0;">Марки</h2>
+          <p class="page-subtitle" style="margin:0 0 14px 0;">
+            Всяка марка има страница с история, технологии и галерия.
+          </p>
+
+          <div class="brand-grid">
+            <a class="card brand-item" href="brands/mercedes.html">
+              <div class="brand-logo">MB</div>
+              <div>
+                <h3 style="margin:0 0 6px 0;">Mercedes</h3>
+                <p style="margin:0;color:var(--muted);line-height:1.6;">AMG, 4MATIC, EQ и модели.</p>
+              </div>
+            </a>
+
+            <a class="card brand-item" href="brands/honda.html">
+              <div class="brand-logo">H</div>
+              <div>
+                <h3 style="margin:0 0 6px 0;">Honda</h3>
+                <p style="margin:0;color:var(--muted);line-height:1.6;">VTEC, Type R и инженерни решения.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="card">
+          <h2 style="margin:0 0 6px 0;">Галерия</h2>
+          <p class="page-subtitle" style="margin:0 0 14px 0;">
+            Място за 4 снимки (може да са от теми, марки, диаграми и т.н.).
+          </p>
+
+          <div class="gallery">
+            <div class="media">
+              <img src="assets/img/gallery-1.jpg" alt="Галерия 1" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>GALLERY 1</div>';">
+            </div>
+            <div class="media">
+              <img src="assets/img/gallery-2.jpg" alt="Галерия 2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>GALLERY 2</div>';">
+            </div>
+            <div class="media">
+              <img src="assets/img/gallery-3.jpg" alt="Галерия 3" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>GALLERY 3</div>';">
+            </div>
+            <div class="media">
+              <img src="assets/img/gallery-4.jpg" alt="Галерия 4" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:var(--muted);&quot;>GALLERY 4</div>';">
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
   </div>
