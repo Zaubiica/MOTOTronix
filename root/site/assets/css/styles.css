@@ -327,21 +327,27 @@ a:focus-visible, button:focus-visible{
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap);
 }
+
 .brand-item{
   display:flex;
-  gap: 12px;
+  gap: 18px;              /* повече разстояние */
   align-items:center;
 }
-.brand-logo{
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
+
+.brand-logo {
+  width: 130px;           /* по-големи */
+  height: 130px;          /* еднаква височина */
+  border-radius: 18px;    /* като бутоните */
+  overflow: hidden;
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.04);
-  display:grid;
-  place-items:center;
-  color: var(--muted);
-  font-weight: 700;
+  flex-shrink: 0;         /* да не се свива */
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* запълва целия бордър */
 }
 
 .gallery{
@@ -360,3 +366,53 @@ a:focus-visible, button:focus-visible{
   .gallery{ grid-template-columns: 1fr; }
 }
 
+/* LIGHTBOX */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.lightbox.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img{
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Gallery hover effect */
+.gallery .media img{
+  cursor: pointer;                /* сменя курсора */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery .media img:hover{
+  transform: scale(1.03);         /* лек zoom */
+  opacity: 0.9;
+}
+.sidebar {
+  height: 100vh;          /* заема цялата височина */
+  overflow-y: auto;       /* позволява вертикален скрол */
+  overflow-x: hidden;
+}
