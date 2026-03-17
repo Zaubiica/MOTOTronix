@@ -416,3 +416,7 @@ a:focus-visible, button:focus-visible{
   overflow-y: auto;       /* позволява вертикален скрол */
   overflow-x: hidden;
 }
+.card-mini-media{
+  width: 100%;
+  height: auto;
+}
