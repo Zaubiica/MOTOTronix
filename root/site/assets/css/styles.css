@@ -420,3 +420,15 @@ a:focus-visible, button:focus-visible{
   width: 100%;
   height: auto;
 }
+.gif-box {
+  margin: 12px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+}
+
+.gif-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
