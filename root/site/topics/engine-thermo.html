@@ -13,7 +13,7 @@
         <div class="dot"></div>
         <div>
           <div class="title">Начало</div>
-          <div class="subtitle">термодинамика</div>
+          <div class="subtitle">ДВГ / Термодинамика</div>
       </div>
       </a>
 
@@ -74,21 +74,93 @@
         </section>
 
         <section class="grid">
-          <article class="card">
-            <h2 style="margin:0 0 8px 0;">Секции</h2>
-            <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.8;">
-              <li>Ото / Дизел цикъл</li>
-              <li>Степен на сгъстяване</li>
-              <li>Топлообмен и загуби</li>
-            </ul>
-          </article>
+          <section class="card">
+            <h2>Как работи двигателят с вътрешно горене</h2>
 
-          <article class="card">
-            <h2 style="margin:0 0 8px 0;">Материали</h2>
-            <p style="margin:0;color:var(--muted);line-height:1.6;">
-              Добави примери, задачи и схеми.
+            <p style="color:var(--muted); line-height:1.7;">
+              Двигателят с вътрешно горене (ДВГ) преобразува химичната енергия на горивото
+              в механична работа чрез контролирано изгаряне в цилиндрите.
             </p>
-          </article>
+
+            <h3>4-тактов цикъл</h3>
+
+            <ul style="line-height:1.8; color:var(--muted);">
+              <li><b>Всмукване:</b> въздух + гориво влизат в цилиндъра</li>
+              <li><b>Компресия:</b> сместа се сгъстява → повишава се температурата</li>
+              <li><b>Работен такт:</b> запалване → експлозия → буталото се движи надолу</li>
+              <li><b>Изпускане:</b> изгорелите газове се извеждат</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Ото цикъл (бензинов двигател)</h2>
+
+            <p style="color:var(--muted); line-height:1.7;">
+              Ото цикълът описва идеализираната работа на бензинов двигател.
+              Състои се от два адиабатни и два изохорни процеса.
+            </p>
+
+            <ul style="color:var(--muted); line-height:1.8;">
+              <li>1 → 2: адиабатна компресия</li>
+              <li>2 → 3: изгаряне (постоянен обем)</li>
+              <li>3 → 4: адиабатно разширение</li>
+              <li>4 → 1: охлаждане</li>
+            </ul>
+
+            <p><b>КПД формула:</b></p>
+
+            <pre style="background:#111;padding:12px;border-radius:8px;">
+          η = 1 - (1 / r^(γ - 1))
+            </pre>
+
+            <p style="color:var(--muted);">
+              където r е степента на сгъстяване, а γ ≈ 1.4
+            </p>
+          </section>
+
+          <section class="card">
+            <h2>Дизелов цикъл</h2>
+
+            <p style="color:var(--muted); line-height:1.7;">
+              При дизеловите двигатели горивото се впръсква при висока компресия,
+              без запалителна свещ.
+            </p>
+
+            <ul style="color:var(--muted); line-height:1.8;">
+              <li>По-висок КПД</li>
+              <li>По-голям въртящ момент</li>
+              <li>По-нисък разход</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Енергийни загуби</h2>
+
+            <ul style="color:var(--muted); line-height:1.8;">
+              <li>Топлинни загуби (охлаждане)</li>
+              <li>Триене</li>
+              <li>Изгорели газове</li>
+            </ul>
+
+            <p style="color:var(--muted);">
+              Само ~30–40% от енергията на горивото се превръща в полезна работа.
+            </p>
+          </section>
+
+          <section class="card">
+            <h2>Инженерен анализ</h2>
+
+            <p style="color:var(--muted); line-height:1.7;">
+              Основните фактори за ефективност на двигателя са:
+            </p>
+
+            <ul style="color:var(--muted); line-height:1.8;">
+              <li>Степен на сгъстяване</li>
+              <li>Температура на горене</li>
+              <li>Аеродинамика на всмукване</li>
+              <li>Турбокомпресор</li>
+            </ul>
+          </section>
         </section>
       </div>
     </main>
